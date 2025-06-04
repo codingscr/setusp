@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Clone - Discover the best food & drinks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/zomato-logo.png" alt="Zomato Logo">
+                    </a>
+                </div>
+                <div class="location-search">
+                    <div class="location-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="New York, USA">
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <a href="#" class="login-btn">Log in</a>
+                    <a href="#" class="signup-btn">Sign up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Discover the best food & drinks in your area</h1>
+                <div class="hero-search">
+                    <div class="location-input">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Enter your delivery location">
+                        <button class="detect-btn">Detect</button>
+                    </div>
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Cuisines Section -->
+    <section class="cuisines-section">
+        <div class="container">
+            <h2>Popular cuisines near you</h2>
+            <div class="cuisine-slider">
+                <div class="cuisine-item">
+                    <img src="images/cuisines/pizza.jpg" alt="Pizza">
+                    <span>Pizza</span>
+                </div>
+                <div class="cuisine-item">
+                    <img src="images/cuisines/burger.jpg" alt="Burger">
+                    <span>Burger</span>
+                </div>
+                <div class="cuisine-item">
+                    <img src="images/cuisines/chinese.jpg" alt="Chinese">
+                    <span>Chinese</span>
+                </div>
+                <div class="cuisine-item">
+                    <img src="images/cuisines/italian.jpg" alt="Italian">
+                    <span>Italian</span>
+                </div>
+                <div class="cuisine-item">
+                    <img src="images/cuisines/south-indian.jpg" alt="South Indian">
+                    <span>South Indian</span>
+                </div>
+                <div class="cuisine-item">
+                    <img src="images/cuisines/north-indian.jpg" alt="North Indian">
+                    <span>North Indian</span>
+                </div>
+                <div class="cuisine-item">
+                    <img src="images/cuisines/desserts.jpg" alt="Desserts">
+                    <span>Desserts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters and Restaurant Listing -->
+    <section class="restaurant-section">
+        <div class="container">
+            <h2>Best Restaurants Near You</h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-item">
+                    <select name="sort" id="sort-select">
+                        <option value="popularity">Popularity</option>
+                        <option value="rating">Rating: High to Low</option>
+                        <option value="cost-low">Cost: Low to High</option>
+                        <option value="cost-high">Cost: High to Low</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <button class="filter-btn">
+                        <i class="fas fa-filter"></i> Filters
+                    </button>
+                </div>
+                <div class="filter-item">
+                    <button class="cuisine-btn">Cuisines</button>
+                </div>
+                <div class="filter-item">
+                    <button class="rating-btn">Rating: 4.0+</button>
+                </div>
+                <div class="filter-item">
+                    <button class="cost-btn">Cost: $$$</button>
+                </div>
+            </div>
+
+            <!-- Restaurant Cards -->
+            <div class="restaurant-grid">
+                <!-- Restaurant Card 1 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant1.jpg" alt="Restaurant 1">
+                        <div class="offer-tag">50% OFF up to $5</div>
+                        <div class="time-tag">25-30 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>The Burger Joint</h3>
+                            <div class="rating">
+                                <span>4.2</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Burgers, Fast Food, Beverages</p>
+                            <p>$20 for one</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 2 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant2.jpg" alt="Restaurant 2">
+                        <div class="offer-tag">30% OFF up to $3</div>
+                        <div class="time-tag">35-40 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>Pizza Paradise</h3>
+                            <div class="rating">
+                                <span>4.5</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Pizza, Italian, Pasta</p>
+                            <p>$25 for one</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 3 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant3.jpg" alt="Restaurant 3">
+                        <div class="offer-tag">Buy 1 Get 1 Free</div>
+                        <div class="time-tag">20-25 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>Sushi Station</h3>
+                            <div class="rating">
+                                <span>4.7</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Japanese, Sushi, Asian</p>
+                            <p>$35 for one</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 4 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant4.jpg" alt="Restaurant 4">
+                        <div class="offer-tag">Free Delivery</div>
+                        <div class="time-tag">40-45 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>Taco Town</h3>
+                            <div class="rating">
+                                <span>4.0</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Mexican, Tacos, Burritos</p>
+                            <p>$18 for one</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 5 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant5.jpg" alt="Restaurant 5">
+                        <div class="offer-tag">20% OFF</div>
+                        <div class="time-tag">30-35 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>Spice Garden</h3>
+                            <div class="rating">
+                                <span>4.3</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Indian, Curry, Biryani</p>
+                            <p>$22 for one</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 6 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant6.jpg" alt="Restaurant 6">
+                        <div class="offer-tag">15% OFF</div>
+                        <div class="time-tag">25-30 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>Noodle House</h3>
+                            <div class="rating">
+                                <span>4.1</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Chinese, Thai, Noodles</p>
+                            <p>$15 for one</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more">
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section class="app-section">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-image">
+                    <img src="images/app-mockup.png" alt="Zomato App">
+                </div>
+                <div class="app-info">
+                    <h2>Get the Zomato App</h2>
+                    <p>We will send you a link, open it on your phone to download the app</p>
+                    <div class="app-radio">
+                        <label>
+                            <input type="radio" name="app-platform" checked>
+                            <span>Email</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="app-platform">
+                            <span>Phone</span>
+                        </label>
+                    </div>
+                    <div class="app-input">
+                        <input type="text" placeholder="Email">
+                        <button>Share App Link</button>
+                    </div>
+                    <div class="app-download">
+                        <p>Download app from</p>
+                        <div class="app-buttons">
+                            <a href="#"><img src="images/google-play.png" alt="Google Play"></a>
+                            <a href="#"><img src="images/app-store.png" alt="App Store"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="images/zomato-logo.png" alt="Zomato Logo">
+                </div>
+                <div class="footer-buttons">
+                    <button class="country-btn">
+                        <img src="images/india-flag.png" alt="India">
+                        <span>India</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>ABOUT ZOMATO</h4>
+                    <ul>
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Work With Us</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Report Fraud</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>ZOMAVERSE</h4>
+                    <ul>
+                        <li><a href="#">Zomato</a></li>
+                        <li><a href="#">Feeding India</a></li>
+                        <li><a href="#">Hyperpure</a></li>
+                        <li><a href="#">Zomaland</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>FOR RESTAURANTS</h4>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Apps For You</a></li>
+                    </ul>
+                    <h4>FOR ENTERPRISES</h4>
+                    <ul>
+                        <li><a href="#">Zomato For Work</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>LEARN MORE</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column social">
+                    <h4>SOCIAL LINKS</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="app-stores">
+                        <a href="#"><img src="images/app-store.png" alt="App Store"></a>
+                        <a href="#"><img src="images/google-play.png" alt="Google Play"></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

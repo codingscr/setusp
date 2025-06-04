@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up - Zomato Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Login Page Specific Styles */
+        .auth-container {
+            min-height: calc(100vh - 60px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #f8f8f8;
+        }
+
+        .auth-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+        }
+
+        .auth-header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .auth-header img {
+            height: 30px;
+            margin-bottom: 15px;
+        }
+
+        .auth-header h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .auth-header p {
+            color: #696969;
+            font-size: 14px;
+        }
+
+        .auth-tabs {
+            display: flex;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .auth-tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .auth-tab.active {
+            color: #CB202D;
+        }
+
+        .auth-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #CB202D;
+        }
+
+        .auth-forms {
+            padding: 20px;
+        }
+
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #CB202D;
+        }
+
+        .form-group .error {
+            color: #CB202D;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .form-group input.error-input {
+            border-color: #CB202D;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+
+        .remember-me input {
+            margin-right: 8px;
+            accent-color: #CB202D;
+        }
+
+        .forgot-password {
+            color: #CB202D;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #CB202D;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #b71c28;
+        }
+
+        .submit-btn:disabled {
+            background-color: #e0e0e0;
+            cursor: not-allowed;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: #696969;
+            font-size: 14px;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #e0e0e0;
+        }
+
+        .divider::before {
+            margin-right: 15px;
+        }
+
+        .divider::after {
+            margin-left: 15px;
+        }
+
+        .social-logins {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: white;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            border-color: #CB202D;
+            color: #CB202D;
+        }
+
+        .social-btn i {
+            font-size: 16px;
+        }
+
+        .google-btn i {
+            color: #DB4437;
+        }
+
+        .facebook-btn i {
+            color: #4267B2;
+        }
+
+        .auth-footer {
+            text-align: center;
+            padding: 0 20px 20px;
+            font-size: 14px;
+            color: #696969;
+        }
+
+        .auth-footer a {
+            color: #CB202D;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #696969;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .back-to-home:hover {
+            color: #CB202D;
+        }
+
+        .password-field {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #696969;
+        }
+
+        .terms-privacy {
+            font-size: 12px;
+            color: #696969;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .terms-privacy a {
+            color: #CB202D;
+            text-decoration: none;
+        }
+
+        .terms-privacy a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 576px) {
+            .auth-card {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .auth-container {
+                padding: 0;
+            }
+
+            .social-logins {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/zomato-logo.png" alt="Zomato Logo">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Authentication Container -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Home</span>
+                </a>
+                <img src="images/zomato-logo.png" alt="Zomato Logo">
+                <h2>Welcome to Zomato</h2>
+                <p>Discover the best food & drinks in your area</p>
+            </div>
+
+            <div class="auth-tabs">
+                <div class="auth-tab active" data-tab="login">Login</div>
+                <div class="auth-tab" data-tab="signup">Sign up</div>
+            </div>
+
+            <div class="auth-forms">
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form active" novalidate>
+                    <div class="form-group">
+                        <label for="login-email">Email or Phone</label>
+                        <input type="text" id="login-email" placeholder="Enter your email or phone number" required>
+                        <div class="error" id="login-email-error">Please enter a valid email or phone number</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="password-field">
+                            <input type="password" id="login-password" placeholder="Enter your password" required>
+                            <span class="toggle-password" data-target="login-password">
+                                <i class="far fa-eye"></i>
+                            </span>
+                        </div>
+                        <div class="error" id="login-password-error">Password must be at least 6 characters</div>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label class="remember-me">
+                            <input type="checkbox" id="remember-me">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="login-btn">Login</button>
+
+                    <div class="divider">or</div>
+
+                    <div class="social-logins">
+                        <button type="button" class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            <span>Google</span>
+                        </button>
+                        <button type="button" class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </button>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>New to Zomato? <a href="#" class="switch-form" data-target="signup">Create account</a></p>
+                    </div>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signup-form" class="auth-form" novalidate>
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                        <div class="error" id="signup-name-error">Please enter your name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        <div class="error" id="signup-email-error">Please enter a valid email</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-phone">Phone Number</label>
+                        <input type="tel" id="signup-phone" placeholder="Enter your phone number" required>
+                        <div class="error" id="signup-phone-error">Please enter a valid phone number</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <div class="password-field">
+                            <input type="password" id="signup-password" placeholder="Create a password" required>
+                            <span class="toggle-password" data-target="signup-password">
+                                <i class="far fa-eye"></i>
+                            </span>
+                        </div>
+                        <div class="error" id="signup-password-error">Password must be at least 8 characters with a number and a special character</div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="signup-btn">Create Account</button>
+
+                    <div class="divider">or</div>
+
+                    <div class="social-logins">
+                        <button type="button" class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            <span>Google</span>
+                        </button>
+                        <button type="button" class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </button>
+                    </div>
+
+                    <div class="terms-privacy">
+                        By creating an account, I accept Zomato's 
+                        <a href="#">Terms of Service</a> and 
+                        <a href="#">Privacy Policy</a>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="#" class="switch-form" data-target="login">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.auth-tab');
+            const forms = document.querySelectorAll('.auth-form');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show corresponding form
+                    forms.forEach(form => {
+                        form.classList.remove('active');
+                        if (form.id === `${tabId}-form`) {
+                            form.classList.add('active');
+                        }
+                    });
+                });
+            });
+            
+            // Form switching links
+            const switchLinks = document.querySelectorAll('.switch-form');
+            switchLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetTab = this.getAttribute('data-target');
+                    document.querySelector(`.auth-tab[data-tab="${targetTab}"]`).click();
+                });
+            });
+            
+            // Password visibility toggle
+            const toggleButtons = document.querySelectorAll('.toggle-password');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const passwordInput = document.getElementById(targetId);
+                    const icon = this.querySelector('i');
+                    
+                    if (passwordInput.type === 'password') {
+                        passwordInput.type = 'text';
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    } else {
+                        passwordInput.type = 'password';
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    }
+                });
+            });
+            
+            // Form validation
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            
+            // Login form validation
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let isValid = true;
+                
+                // Email/Phone validation
+                const loginEmail = document.getElementById('login-email');
+                const loginEmailError = document.getElementById('login-email-error');
+                const emailPhoneRegex = /^([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})|(\d{10})$/;
+                
+                if (!emailPhoneRegex.test(loginEmail.value.trim())) {
+                    loginEmail.classList.add('error-input');
+                    loginEmailError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    loginEmail.classList.remove('error-input');
+                    loginEmailError.style.display = 'none';
+                }
+                
+                // Password validation
+                const loginPassword = document.getElementById('login-password');
+                const loginPasswordError = document.getElementById('login-password-error');
+                
+                if (loginPassword.value.length < 6) {
+                    loginPassword.classList.add('error-input');
+                    loginPasswordError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    loginPassword.classList.remove('error-input');
+                    loginPasswordError.style.display = 'none';
+                }
+                
+                if (isValid) {
+                    // Form is valid, submit or redirect
+                    showToast('Login successful! Redirecting...', 'success');
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 2000);
+                }
+            });
+            
+            // Signup form validation
+            signupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let isValid = true;
+                
+                // Name validation
+                const signupName = document.getElementById('signup-name');
+                const signupNameError = document.getElementById('signup-name-error');
+                
+                if (signupName.value.trim().length < 2) {
+                    signupName.classList.add('error-input');
+                    signupNameError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    signupName.classList.remove('error-input');
+                    signupNameError.style.display = 'none';
+                }
+                
+                // Email validation
+                const signupEmail = document.getElementById('signup-email');
+                const signupEmailError = document.getElementById('signup-email-error');
+                const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                
+                if (!emailRegex.test(signupEmail.value.trim())) {
+                    signupEmail.classList.add('error-input');
+                    signupEmailError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    signupEmail.classList.remove('error-input');
+                    signupEmailError.style.display = 'none';
+                }
+                
+                // Phone validation
+                const signupPhone = document.getElementById('signup-phone');
+                const signupPhoneError = document.getElementById('signup-phone-error');
+                const phoneRegex = /^\d{10}$/;
+                
+                if (!phoneRegex.test(signupPhone.value.trim())) {
+                    signupPhone.classList.add('error-input');
+                    signupPhoneError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    signupPhone.classList.remove('error-input');
+                    signupPhoneError.style.display = 'none';
+                }
+                
+                // Password validation
+                const signupPassword = document.getElementById('signup-password');
+                const signupPasswordError = document.getElementById('signup-password-error');
+                const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+                
+                if (!passwordRegex.test(signupPassword.value)) {
+                    signupPassword.classList.add('error-input');
+                    signupPasswordError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    signupPassword.classList.remove('error-input');
+                    signupPasswordError.style.display = 'none';
+                }
+                
+                if (isValid) {
+                    // Form is valid, submit or redirect
+                    showToast('Account created successfully! Redirecting...', 'success');
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 2000);
+                }
+            });
+            
+            // Real-time validation
+            const inputs = document.querySelectorAll('input[required]');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    const errorElement = document.getElementById(`${this.id}-error`);
+                    
+                    if (this.value.trim() !== '') {
+                        this.classList.remove('error-input');
+                        if (errorElement) {
+                            errorElement.style.display = 'none';
+                        }
+                    }
+                });
+            });
+            
+            // Social login buttons
+            const socialButtons = document.querySelectorAll('.social-btn');
+            socialButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const provider = this.classList.contains('google-btn') ? 'Google' : 'Facebook';
+                    showToast(`${provider} login functionality coming soon!`, 'info');
+                });
+            });
+            
+            // Forgot password link
+            const forgotPasswordLink = document.querySelector('.forgot-password');
+            forgotPasswordLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                showToast('Password reset functionality coming soon!', 'info');
+            });
+        });
+        
+        // Toast notification function
+        function showToast(message, type = 'success') {
+            // Check if a toast container exists, if not create one
+            let toastContainer = document.querySelector('.toast-container');
+            if (!toastContainer) {
+                toastContainer = document.createElement('div');
+                toastContainer.className = 'toast-container';
+                document.body.appendChild(toastContainer);
+                
+                // Style the container
+                toastContainer.style.position = 'fixed';
+                toastContainer.style.bottom = '20px';
+                toastContainer.style.right = '20px';
+                toastContainer.style.zIndex = '1000';
+            }
+            
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+            
+            // Style the toast
+            toast.style.backgroundColor = type === 'error' ? '#CB202D' : 
+                                        type === 'info' ? '#256FEF' : '#267E3E';
+            toast.style.color = 'white';
+            toast.style.padding = '12px 20px';
+            toast.style.borderRadius = '4px';
+            toast.style.marginTop = '10px';
+            toast.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(20px)';
+            toast.style.transition = 'all 0.3s ease';
+            
+            // Add to container
+            toastContainer.appendChild(toast);
+            
+            // Trigger animation
+            setTimeout(() => {
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateY(0)';
+            }, 10);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+                
+                // Remove from DOM after animation
+                setTimeout(() => {
+                    toast.remove();
+                    
+                    // Remove container if empty
+                    if (toastContainer.children.length === 0) {
+                        toastContainer.remove();
+                    }
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

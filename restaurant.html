@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Burger Joint - Restaurant Details | Zomato Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/zomato-logo.png" alt="Zomato Logo">
+                    </a>
+                </div>
+                <div class="location-search">
+                    <div class="location-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="New York, USA">
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <a href="#" class="login-btn">Log in</a>
+                    <a href="#" class="signup-btn">Sign up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Restaurant Hero Section -->
+    <section class="restaurant-hero">
+        <div class="container">
+            <div class="restaurant-images">
+                <div class="main-image">
+                    <img src="images/restaurants/restaurant1.jpg" alt="The Burger Joint">
+                </div>
+                <div class="thumbnail-images">
+                    <div class="thumbnail">
+                        <img src="images/restaurants/restaurant1-2.jpg" alt="The Burger Joint Interior">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="images/restaurants/restaurant1-3.jpg" alt="The Burger Joint Food">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="images/restaurants/restaurant1-4.jpg" alt="The Burger Joint Ambience">
+                    </div>
+                    <div class="thumbnail view-gallery">
+                        <div class="overlay">
+                            <i class="fas fa-images"></i>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Info Section -->
+    <section class="restaurant-info-section">
+        <div class="container">
+            <div class="restaurant-content">
+                <div class="restaurant-details">
+                    <div class="restaurant-header">
+                        <h1>The Burger Joint</h1>
+                        <div class="restaurant-tags">
+                            <span>Burgers</span>
+                            <span>Fast Food</span>
+                            <span>Beverages</span>
+                        </div>
+                        <div class="restaurant-location">Downtown, New York</div>
+                        <div class="restaurant-timing">
+                            <span class="open-now">Open Now</span>
+                            <span class="timing">11am – 11pm (Today)</span>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-actions">
+                        <div class="rating-info">
+                            <div class="rating-box">
+                                <div class="rating">
+                                    <span>4.2</span>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="rating-count">2,100+ ratings</div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn">
+                                <i class="fas fa-directions"></i>
+                                <span>Direction</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-bookmark"></i>
+                                <span>Bookmark</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-share-alt"></i>
+                                <span>Share</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-offers">
+                        <h3>Offers</h3>
+                        <div class="offers-container">
+                            <div class="offer-card">
+                                <div class="offer-icon">
+                                    <i class="fas fa-tag"></i>
+                                </div>
+                                <div class="offer-details">
+                                    <h4>50% OFF up to $5</h4>
+                                    <p>Use code WELCOME50</p>
+                                </div>
+                            </div>
+                            <div class="offer-card">
+                                <div class="offer-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <div class="offer-details">
+                                    <h4>20% OFF up to $3</h4>
+                                    <p>Use code ZOMATO20</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-online-cta">
+                    <div class="delivery-info">
+                        <div class="delivery-time">
+                            <i class="fas fa-clock"></i>
+                            <span>25-30 min</span>
+                        </div>
+                        <div class="delivery-cost">
+                            <i class="fas fa-bicycle"></i>
+                            <span>$1.49 delivery fee</span>
+                        </div>
+                    </div>
+                    <button class="order-btn">Order Online</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="content-layout">
+                <div class="main-content">
+                    <!-- Menu Navigation -->
+                    <div class="menu-nav">
+                        <ul>
+                            <li class="active"><a href="#order-online">Order Online</a></li>
+                            <li><a href="#reviews">Reviews</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#photos">Photos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Order Online Section -->
+                    <div id="order-online" class="menu-container">
+                        <div class="menu-search">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search for dishes...">
+                        </div>
+
+                        <div class="menu-categories">
+                            <h3>Categories</h3>
+                            <ul class="category-list">
+                                <li class="active"><a href="#recommended">Recommended</a></li>
+                                <li><a href="#burgers">Burgers</a></li>
+                                <li><a href="#sides">Sides</a></li>
+                                <li><a href="#beverages">Beverages</a></li>
+                                <li><a href="#desserts">Desserts</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Recommended Menu Items -->
+                        <div id="recommended" class="menu-category">
+                            <h2 class="category-title">Recommended <span>(10)</span></h2>
+
+                            <div class="menu-items">
+                                <!-- Menu Item 1 -->
+                                <div class="menu-item">
+                                    <div class="item-image">
+                                        <img src="images/menu/classic-burger.jpg" alt="Classic Burger">
+                                        <div class="item-veg">
+                                            <span class="non-veg-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="item-details">
+                                        <h3>Classic Burger</h3>
+                                        <div class="item-rating">
+                                            <span class="rating">4.5</span>
+                                            <span class="votes">(120+ votes)</span>
+                                        </div>
+                                        <div class="item-price">$12.99</div>
+                                        <div class="item-description">
+                                            Juicy beef patty with fresh lettuce, tomato, onion, pickles, and our special sauce on a toasted bun.
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <button class="add-btn">Add</button>
+                                    </div>
+                                </div>
+
+                                <!-- Menu Item 2 -->
+                                <div class="menu-item">
+                                    <div class="item-image">
+                                        <img src="images/menu/cheese-fries.jpg" alt="Cheese Fries">
+                                        <div class="item-veg">
+                                            <span class="veg-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="item-details">
+                                        <h3>Cheese Fries</h3>
+                                        <div class="item-rating">
+                                            <span class="rating">4.3</span>
+                                            <span class="votes">(85+ votes)</span>
+                                        </div>
+                                        <div class="item-price">$6.99</div>
+                                        <div class="item-description">
+                                            Crispy golden fries topped with melted cheddar cheese and a sprinkle of herbs.
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <button class="add-btn">Add</button>
+                                    </div>
+                                </div>
+
+                                <!-- Menu Item 3 -->
+                                <div class="menu-item">
+                                    <div class="item-image">
+                                        <img src="images/menu/chocolate-shake.jpg" alt="Chocolate Shake">
+                                        <div class="item-veg">
+                                            <span class="veg-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="item-details">
+                                        <h3>Chocolate Shake</h3>
+                                        <div class="item-rating">
+                                            <span class="rating">4.7</span>
+                                            <span class="votes">(150+ votes)</span>
+                                        </div>
+                                        <div class="item-price">$5.99</div>
+                                        <div class="item-description">
+                                            Rich and creamy chocolate milkshake topped with whipped cream and chocolate syrup.
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <button class="add-btn">Add</button>
+                                    </div>
+                                </div>
+
+                                <!-- Menu Item 4 -->
+                                <div class="menu-item">
+                                    <div class="item-image bestseller">
+                                        <div class="bestseller-tag">Bestseller</div>
+                                        <img src="images/menu/double-cheese-burger.jpg" alt="Double Cheese Burger">
+                                        <div class="item-veg">
+                                            <span class="non-veg-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="item-details">
+                                        <h3>Double Cheese Burger</h3>
+                                        <div class="item-rating">
+                                            <span class="rating">4.8</span>
+                                            <span class="votes">(200+ votes)</span>
+                                        </div>
+                                        <div class="item-price">$15.99</div>
+                                        <div class="item-description">
+                                            Two juicy beef patties with double cheese, lettuce, tomato, onion, and our special sauce.
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <button class="add-btn">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Burgers Category -->
+                        <div id="burgers" class="menu-category">
+                            <h2 class="category-title">Burgers <span>(8)</span></h2>
+                            
+                            <div class="menu-items">
+                                <!-- More burger items would go here -->
+                                <div class="menu-item">
+                                    <div class="item-image bestseller">
+                                        <div class="bestseller-tag">Bestseller</div>
+                                        <img src="images/menu/double-cheese-burger.jpg" alt="Double Cheese Burger">
+                                        <div class="item-veg">
+                                            <span class="non-veg-icon"></span>
+                                        </div>
+                                    </div>
+                                    <div class="item-details">
+                                        <h3>Double Cheese Burger</h3>
+                                        <div class="item-rating">
+                                            <span class="rating">4.8</span>
+                                            <span class="votes">(200+ votes)</span>
+                                        </div>
+                                        <div class="item-price">$15.99</div>
+                                        <div class="item-description">
+                                            Two juicy beef patties with double cheese, lettuce, tomato, onion, and our special sauce.
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <button class="add-btn">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Section -->
+                    <div id="reviews" class="reviews-container">
+                        <h2 class="section-title">Customer Reviews</h2>
+                        
+                        <div class="rating-summary">
+                            <div class="overall-rating">
+                                <div class="rating-number">4.2</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-count">2,100+ reviews</div>
+                            </div>
+                            
+                            <div class="rating-breakdown">
+                                <div class="rating-bar">
+                                    <span class="rating-label">5</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="rating-label">4</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="rating-label">3</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 10%"></div>
+                                    </div>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="rating-label">2</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 3%"></div>
+                                    </div>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="rating-label">1</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 2%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="review-filters">
+                            <button class="filter-btn active">All Reviews</button>
+                            <button class="filter-btn">Latest</button>
+                            <button class="filter-btn">Positive</button>
+                            <button class="filter-btn">Negative</button>
+                            <button class="filter-btn">Photos</button>
+                        </div>
+                        
+                        <div class="reviews-list">
+                            <!-- Review 1 -->
+                            <div class="review-card">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">
+                                        <img src="images/users/user1.jpg" alt="John D.">
+                                    </div>
+                                    <div class="reviewer-details">
+                                        <h4>John D.</h4>
+                                        <div class="reviewer-stats">
+                                            <span class="reviews-count">24 reviews</span>
+                                            <span class="photos-count">12 photos</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <span>4.5</span>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>The burgers here are absolutely amazing! The patty was juicy and cooked to perfection. The fries were crispy and the milkshake was thick and creamy. Will definitely be coming back!</p>
+                                </div>
+                                <div class="review-photos">
+                                    <img src="images/reviews/review1-1.jpg" alt="Food Photo">
+                                    <img src="images/reviews/review1-2.jpg" alt="Food Photo">
+                                </div>
+                                <div class="review-footer">
+                                    <span class="review-date">Reviewed 2 days ago</span>
+                                    <div class="review-actions">
+                                        <button class="like-btn">
+                                            <i class="far fa-thumbs-up"></i>
+                                            <span>Helpful (24)</span>
+                                        </button>
+                                        <button class="comment-btn">
+                                            <i class="far fa-comment"></i>
+                                            <span>Comment</span>
+                                        </button>
+                                        <button class="share-btn">
+                                            <i class="far fa-share-square"></i>
+                                            <span>Share</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 2 -->
+                            <div class="review-card">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">
+                                        <img src="images/users/user2.jpg" alt="Sarah M.">
+                                    </div>
+                                    <div class="reviewer-details">
+                                        <h4>Sarah M.</h4>
+                                        <div class="reviewer-stats">
+                                            <span class="reviews-count">42 reviews</span>
+                                            <span class="photos-count">31 photos</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <span>3.5</span>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>The food was good but the service was a bit slow. Had to wait almost 40 minutes for my order. The burger was tasty though, and the cheese fries were excellent. Would give it another chance.</p>
+                                </div>
+                                <div class="review-footer">
+                                    <span class="review-date">Reviewed 1 week ago</span>
+                                    <div class="review-actions">
+                                        <button class="like-btn">
+                                            <i class="far fa-thumbs-up"></i>
+                                            <span>Helpful (12)</span>
+                                        </button>
+                                        <button class="comment-btn">
+                                            <i class="far fa-comment"></i>
+                                            <span>Comment</span>
+                                        </button>
+                                        <button class="share-btn">
+                                            <i class="far fa-share-square"></i>
+                                            <span>Share</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 3 -->
+                            <div class="review-card">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">
+                                        <img src="images/users/user3.jpg" alt="Mike T.">
+                                    </div>
+                                    <div class="reviewer-details">
+                                        <h4>Mike T.</h4>
+                                        <div class="reviewer-stats">
+                                            <span class="reviews-count">18 reviews</span>
+                                            <span class="photos-count">7 photos</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <span>5.0</span>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Best burgers in town, hands down! The Double Cheese Burger is to die for. Staff is friendly and the place has a great vibe. Prices are reasonable for the quality you get. Highly recommend!</p>
+                                </div>
+                                <div class="review-photos">
+                                    <img src="images/reviews/review3-1.jpg" alt="Food Photo">
+                                </div>
+                                <div class="review-footer">
+                                    <span class="review-date">Reviewed 2 weeks ago</span>
+                                    <div class="review-actions">
+                                        <button class="like-btn">
+                                            <i class="far fa-thumbs-up"></i>
+                                            <span>Helpful (37)</span>
+                                        </button>
+                                        <button class="comment-btn">
+                                            <i class="far fa-comment"></i>
+                                            <span>Comment</span>
+                                        </button>
+                                        <button class="share-btn">
+                                            <i class="far fa-share-square"></i>
+                                            <span>Share</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="load-more">
+                            <button class="load-more-btn">Load More Reviews</button>
+                        </div>
+                        
+                        <div class="write-review">
+                            <h3>Write a Review</h3>
+                            <div class="rating-input">
+                                <span>Rate your experience:</span>
+                                <div class="star-rating">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-form">
+                                <textarea placeholder="Share your experience..."></textarea>
+                                <div class="form-actions">
+                                    <button class="upload-btn"><i class="fas fa-camera"></i> Add Photos</button>
+                                    <button class="submit-btn">Submit Review</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- About Section -->
+                    <div id="about" class="about-container">
+                        <h2 class="section-title">About</h2>
+                        
+                        <div class="about-details">
+                            <div class="about-info">
+                                <h3>The Burger Joint</h3>
+                                <p>The Burger Joint is a premium burger restaurant that specializes in gourmet burgers made with locally sourced ingredients. Our beef is 100% grass-fed and our buns are freshly baked every morning. We pride ourselves on quality, taste, and excellent customer service.</p>
+                                
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h4><i class="fas fa-utensils"></i> Cuisines</h4>
+                                        <p>Burgers, Fast Food, American</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h4><i class="fas fa-dollar-sign"></i> Average Cost</h4>
+                                        <p>$20 for one (approx.)</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h4><i class="fas fa-credit-card"></i> Payment Methods</h4>
+                                        <p>Cash, Credit Card, Debit Card, Digital Wallet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <h4><i class="fas fa-phone-alt"></i> Phone Number</h4>
+                                    <p>+1 (212) 555-1234</p>
+                                </div>
+                                <div class="contact-item">
+                                    <h4><i class="fas fa-envelope"></i> Email</h4>
+                                    <p>info@theburgerjoint.com</p>
+                                </div>
+                                <div class="contact-item">
+                                    <h4><i class="fas fa-map-marker-alt"></i> Address</h4>
+                                    <p>123 Broadway, New York, NY 10001</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="opening-hours">
+                            <h3><i class="far fa-clock"></i> Opening Hours</h3>
+                            <div class="hours-grid">
+                                <div class="day-hours">
+                                    <span class="day">Monday</span>
+                                    <span class="hours">11:00 AM - 11:00 PM</span>
+                                </div>
+                                <div class="day-hours">
+                                    <span class="day">Tuesday</span>
+                                    <span class="hours">11:00 AM - 11:00 PM</span>
+                                </div>
+                                <div class="day-hours">
+                                    <span class="day">Wednesday</span>
+                                    <span class="hours">11:00 AM - 11:00 PM</span>
+                                </div>
+                                <div class="day-hours">
+                                    <span class="day">Thursday</span>
+                                    <span class="hours">11:00 AM - 11:00 PM</span>
+                                </div>
+                                <div class="day-hours">
+                                    <span class="day">Friday</span>
+                                    <span class="hours">11:00 AM - 12:00 AM</span>
+                                </div>
+                                <div class="day-hours">
+                                    <span class="day">Saturday</span>
+                                    <span class="hours">10:00 AM - 12:00 AM</span>
+                                </div>
+                                <div class="day-hours">
+                                    <span class="day">Sunday</span>
+                                    <span class="hours">10:00 AM - 10:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="restaurant-map">
+                            <h3><i class="fas fa-map-marked-alt"></i> Location & Direction</h3>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573814587!2d-73.98823492426856!3d40.75895087138558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b30eac9f%3A0x4170c5d45c7c98e1!2sNew%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2sin!4v1654321234567!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <div class="direction-actions">
+                                <button class="direction-btn">
+                                    <i class="fas fa-directions"></i>
+                                    <span>Get Directions</span>
+                                </button>
+                                <button class="copy-btn">
+                                    <i class="fas fa-copy"></i>
+                                    <span>Copy Address</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar - Order Cart -->
+                <div class="order-sidebar">
+                    <div class="cart-container">
+                        <h3>Your Order</h3>
+                        <div class="cart-items">
+                            <div class="empty-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                                <p>Your cart is empty</p>
+                                <span>Add items from the menu</span>
+                            </div>
+                            
+                            <!-- Cart items will be added here dynamically -->
+                            <div class="cart-item" style="display: none;">
+                                <div class="item-info">
+                                    <div class="item-name">Classic Burger</div>
+                                    <div class="item-price">$12.99</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="quantity-btn minus">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-summary" style="display: none;">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span>$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Fee</span>
+                                <span>$1.49</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax</span>
+                                <span>$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span>$0.00</span>
+                            </div>
+                        </div>
+                        
+                        <button class="checkout-btn" disabled>Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Restaurants Section -->
+    <section class="similar-restaurants">
+        <div class="container">
+            <h2 class="section-title">You Might Also Like</h2>
+            
+            <div class="restaurant-slider">
+                <!-- Similar Restaurant 1 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant2.jpg" alt="Pizza Paradise">
+                        <div class="offer-tag">30% OFF up to $3</div>
+                        <div class="time-tag">35-40 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>Pizza Paradise</h3>
+                            <div class="rating">
+                                <span>4.5</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Pizza, Italian, Pasta</p>
+                            <p>$25 for one</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Similar Restaurant 2 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant4.jpg" alt="Taco Town">
+                        <div class="offer-tag">Free Delivery</div>
+                        <div class="time-tag">40-45 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>Taco Town</h3>
+                            <div class="rating">
+                                <span>4.0</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Mexican, Tacos, Burritos</p>
+                            <p>$18 for one</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Similar Restaurant 3 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant5.jpg" alt="Spice Garden">
+                        <div class="offer-tag">20% OFF</div>
+                        <div class="time-tag">30-35 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>Spice Garden</h3>
+                            <div class="rating">
+                                <span>4.3</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Indian, Curry, Biryani</p>
+                            <p>$22 for one</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Similar Restaurant 4 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="images/restaurants/restaurant3.jpg" alt="Sushi Station">
+                        <div class="offer-tag">Buy 1 Get 1 Free</div>
+                        <div class="time-tag">20-25 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <div class="restaurant-name-rating">
+                            <h3>Sushi Station</h3>
+                            <div class="rating">
+                                <span>4.7</span>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="restaurant-cuisine-cost">
+                            <p>Japanese, Sushi, Asian</p>
+                            <p>$35 for one</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="images/zomato-logo.png" alt="Zomato Logo">
+                </div>
+                <div class="footer-buttons">
+                    <button class="country-btn">
+                        <img src="images/india-flag.png" alt="India">
+                        <span>India</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>ABOUT ZOMATO</h4>
+                    <ul>
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Work With Us</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Report Fraud</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>ZOMAVERSE</h4>
+                    <ul>
+                        <li><a href="#">Zomato</a></li>
+                        <li><a href="#">Feeding India</a></li>
+                        <li><a href="#">Hyperpure</a></li>
+                        <li><a href="#">Zomaland</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>FOR RESTAURANTS</h4>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Apps For You</a></li>
+                    </ul>
+                    <h4>FOR ENTERPRISES</h4>
+                    <ul>
+                        <li><a href="#">Zomato For Work</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>LEARN MORE</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column social">
+                    <h4>SOCIAL LINKS</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="app-stores">
+                        <a href="#"><img src="images/app-store.png" alt="App Store"></a>
+                        <a href="#"><img src="images/google-play.png" alt="Google Play"></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Restaurant page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initRestaurantPage();
+        });
+
+        function initRestaurantPage() {
+            // Initialize menu navigation
+            initMenuNav();
+            
+            // Initialize add to cart functionality
+            initAddToCart();
+            
+            // Initialize review functionality
+            initReviews();
+            
+            // Initialize gallery view
+            initGallery();
+        }
+
+        function initMenuNav() {
+            const menuLinks = document.querySelectorAll('.menu-nav a');
+            const categoryLinks = document.querySelectorAll('.category-list a');
+            
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    menuLinks.forEach(l => l.parentElement.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.parentElement.classList.add('active');
+                    
+                    // Scroll to section
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    categoryLinks.forEach(l => l.parentElement.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.parentElement.classList.add('active');
+                    
+                    // Scroll to category
+                    const targetId = this.getAttribute('href');
+                    const targetCategory = document.querySelector(targetId);
+                    if (targetCategory) {
+                        targetCategory.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        function initAddToCart() {
+            const addButtons = document.querySelectorAll('.add-btn');
+            const cartItems = document.querySelector('.cart-items');
+            const emptyCart = document.querySelector('.empty-cart');
+            const cartSummary = document.querySelector('.cart-summary');
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            
+            let cartCount = 0;
+            
+            addButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const menuItem = this.closest('.menu-item');
+                    const itemName = menuItem.querySelector('h3').textContent;
+                    const itemPrice = menuItem.querySelector('.item-price').textContent;
+                    
+                    // Check if item is already in cart
+                    const existingItem = document.querySelector(`.cart-item[data-name="${itemName}"]`);
+                    
+                    if (existingItem) {
+                        // Increment quantity
+                        const quantitySpan = existingItem.querySelector('.quantity');
+                        let quantity = parseInt(quantitySpan.textContent);
+                        quantitySpan.textContent = ++quantity;
+                    } else {
+                        // Add new item to cart
+                        const cartItem = document.createElement('div');
+                        cartItem.className = 'cart-item';
+                        cartItem.setAttribute('data-name', itemName);
+                        cartItem.setAttribute('data-price', itemPrice.replace('$', ''));
+                        
+                        cartItem.innerHTML = `
+                            <div class="item-info">
+                                <div class="item-name">${itemName}</div>
+                                <div class="item-price">${itemPrice}</div>
+                            </div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <span class="quantity">1</span>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        `;
+                        
+                        cartItems.appendChild(cartItem);
+                        
+                        // Add event listeners for quantity buttons
+                        const minusBtn = cartItem.querySelector('.minus');
+                        const plusBtn = cartItem.querySelector('.plus');
+                        
+                        minusBtn.addEventListener('click', function() {
+                            const quantitySpan = cartItem.querySelector('.quantity');
+                            let quantity = parseInt(quantitySpan.textContent);
+                            if (quantity > 1) {
+                                quantitySpan.textContent = --quantity;
+                                updateCartSummary();
+                            } else {
+                                cartItem.remove();
+                                cartCount--;
+                                if (cartCount === 0) {
+                                    emptyCart.style.display = 'flex';
+                                    cartSummary.style.display = 'none';
+                                    checkoutBtn.disabled = true;
+                                }
+                                updateCartSummary();
+                            }
+                        });
+                        
+                        plusBtn.addEventListener('click', function() {
+                            const quantitySpan = cartItem.querySelector('.quantity');
+                            let quantity = parseInt(quantitySpan.textContent);
+                            quantitySpan.textContent = ++quantity;
+                            updateCartSummary();
+                        });
+                    }
+                    
+                    // Update cart UI
+                    if (cartCount === 0) {
+                        emptyCart.style.display = 'none';
+                        cartSummary.style.display = 'block';
+                        checkoutBtn.disabled = false;
+                    }
+                    
+                    cartCount++;
+                    updateCartSummary();
+                    
+                    // Show added to cart notification
+                    showToast(`${itemName} added to cart`);
+                });
+            });
+            
+            function updateCartSummary() {
+                const cartItems = document.querySelectorAll('.cart-item');
+                let subtotal = 0;
+                
+                cartItems.forEach(item => {
+                    const price = parseFloat(item.getAttribute('data-price'));
+                    const quantity = parseInt(item.querySelector('.quantity').textContent);
+                    subtotal += price * quantity;
+                });
+                
+                const tax = subtotal * 0.08; // 8% tax
+                const deliveryFee = 1.49;
+                const total = subtotal + tax + deliveryFee;
+                
+                // Update summary values
+                document.querySelector('.summary-row:nth-child(1) span:last-child').textContent = `$${subtotal.toFixed(2)}`;
+                document.querySelector('.summary-row:nth-child(3) span:last-child').textContent = `$${tax.toFixed(2)}`;
+                document.querySelector('.total span:last-child').textContent = `$${total.toFixed(2)}`;
+            }
+        }
+
+        function initReviews() {
+            // Star rating functionality
+            const stars = document.querySelectorAll('.star-rating i');
+            
+            stars.forEach((star, index) => {
+                star.addEventListener('mouseover', function() {
+                    // Fill stars up to current
+                    for (let i = 0; i <= index; i++) {
+                        stars[i].className = 'fas fa-star';
+                    }
+                    
+                    // Empty stars after current
+                    for (let i = index + 1; i < stars.length; i++) {
+                        stars[i].className = 'far fa-star';
+                    }
+                });
+                
+                star.addEventListener('click', function() {
+                    // Set data attribute for selected rating
+                    this.parentElement.setAttribute('data-rating', index + 1);
+                });
+            });
+            
+            // Reset stars when mouse leaves container
+            document.querySelector('.star-rating').addEventListener('mouseleave', function() {
+                const rating = parseInt(this.getAttribute('data-rating') || 0);
+                
+                stars.forEach((star, index) => {
+                    if (index < rating) {
+                        star.className = 'fas fa-star';
+                    } else {
+                        star.className = 'far fa-star';
+                    }
+                });
+            });
+            
+            // Review submission
+            const submitBtn = document.querySelector('.submit-btn');
+            if (submitBtn) {
+                submitBtn.addEventListener('click', function() {
+                    const rating = parseInt(document.querySelector('.star-rating').getAttribute('data-rating') || 0);
+                    const reviewText = document.querySelector('.review-form textarea').value.trim();
+                    
+                    if (rating === 0) {
+                        showToast('Please select a rating', 'error');
+                        return;
+                    }
+                    
+                    if (reviewText === '') {
+                        showToast('Please write your review', 'error');
+                        return;
+                    }
+                    
+                    // In a real app, this would submit the review to a server
+                    showToast('Your review has been submitted!');
+                    
+                    // Reset form
+                    document.querySelector('.star-rating').setAttribute('data-rating', 0);
+                    document.querySelector('.review-form textarea').value = '';
+                    
+                    stars.forEach(star => {
+                        star.className = 'far fa-star';
+                    });
+                });
+            }
+            
+            // Review filter buttons
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // In a real app, this would filter the reviews
+                    const filterType = this.textContent.toLowerCase();
+                    console.log('Filtering reviews by:', filterType);
+                });
+            });
+        }
+
+        function initGallery() {
+            const viewGallery = document.querySelector('.view-gallery');
+            if (viewGallery) {
+                viewGallery.addEventListener('click', function() {
+                    // In a real app, this would open a gallery modal
+                    showToast('Gallery feature coming soon!');
+                });
+            }
+            
+            // Make thumbnails clickable to change main image
+            const thumbnails = document.querySelectorAll('.thumbnail:not(.view-gallery)');
+            const mainImage = document.querySelector('.main-image img');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    const imgSrc = this.querySelector('img').src;
+                    mainImage.src = imgSrc;
+                    
+                    // Add animation
+                    mainImage.style.opacity = '0';
+                    setTimeout(() => {
+                        mainImage.style.opacity = '1';
+                    }, 100);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
